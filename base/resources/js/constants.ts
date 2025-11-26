@@ -186,4 +186,4 @@ export const WORK_HOURS: WorkingHours[] = [
 export const GOOGLE_MAPS_EMBED_URL = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3217.059939836738!2d6.589407400000001!3d36.262323699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f1701b3a037005%3A0xf4e1746663c08a4a!2sLa%20Cal%C3%A8che%20caf%C3%A9%20restaurant%20p%C3%A2tisserie!5e0!3m2!1sen!2sdz!4v1763901530298!5m2!1sen!2sdz";
 export const GOOGLE_MAPS_DIRECTIONS_URL = "https://maps.app.goo.gl/vhjHv5MxwXVzftbA8";
 
-export const BACKEND_API_URL = "http://localhost:8000/api"
+export const BACKEND_API_URL = "/api"

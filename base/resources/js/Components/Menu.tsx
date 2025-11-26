@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import { MENU_ITEMS } from '../constants';
-import { MenuCategory } from '../types';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GetItemsService } from '../services/getItemsService.tsx'
 
 interface FoodItem {
   id: number;
@@ -18,12 +15,12 @@ interface SubCategory {
   description: string;
 }
 
-const itemService = new GetItemsService();
-const FOOD_DATA: any = await itemService.getFoodItems()
-const MenuSection: React.FC = () => {
+interface MenuSectionProps {
+  items: FoodItem[];
+}
 
-
-  const itemsData: FoodItem[] = FOOD_DATA.items ?? []
+const MenuSection: React.FC<MenuSectionProps> = ({ items }) => {
+  const itemsData: FoodItem[] = items ?? [];
   console.log('itemsData', itemsData);
 
   const categories = [
