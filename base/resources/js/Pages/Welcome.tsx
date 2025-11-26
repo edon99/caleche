@@ -7,7 +7,7 @@ import Location from '@/Components/Location';
 import Footer from '@/Components/Footer';
 import Drinks from '@/Components/Drinks';
 import About from '@/Components/About';
-import { Head } from '@inertiajs/react';
+import Seo from '@/Components/Seo';
 
 interface WelcomeProps {
     content: any;
@@ -43,7 +43,12 @@ export default function Welcome({ content, foodItems, drinkItems }: WelcomeProps
 
     return (
         <>
-            <Head title="La Caleche | Patisserie, Cafe & Restaurant" />
+            <Seo
+                title="La Caleche | Patisserie, Cafe & Restaurant"
+                description={CONTENT_DATA?.content?.hero_subtitle || "Welcome to La Caleche, a premier Patisserie, Cafe & Restaurant."}
+                keywords="patisserie, cafe, restaurant, la caleche, food, drinks"
+                image={CONTENT_DATA?.content?.hero_image ? `/storage/${CONTENT_DATA.content.hero_image}` : undefined}
+            />
             <div className="font-sans text-caleche-dark bg-caleche-cream/20">
                 <Navbar />
                 <main>
